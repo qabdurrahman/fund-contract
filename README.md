@@ -20,21 +20,31 @@ https://book.getfoundry.sh/
 ```shell
 $ forge build
 ```
+## Inspect
+```
+$ forge inspect FundMe storageLayout
+```
 
 ### Test
-
+It is used for testing
 ```shell
 $ forge test
+$ forge test -vv
+$ forge script script/Interactions.s.sol:FundFundMe --rpc-url [rpcurl] --private-key [privatekey]
 ```
+-vv specifies the visibility of logging in ----?
+(do gpt for the same to understand it better)
 
 ### Format
 
 ```shell
 $ forge fmt
+$ forge test --fork-url $SEPOLIA_RPC_URL -vvvv
 ```
+-vv is just for more visibility as more the v more is the visibility
 
 ### Gas Snapshots
-
+# A file is created with the name .gas-snapshot for the gas
 ```shell
 $ forge snapshot
 ```
@@ -64,3 +74,4 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+# To add to git use git add .
